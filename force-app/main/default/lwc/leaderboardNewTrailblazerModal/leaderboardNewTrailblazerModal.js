@@ -1,3 +1,10 @@
+/**
+ * @description       : 
+ * @author            : dzshanno@yahoo.com
+ * @group             : 
+ * @last modified on  : 18-11-2022
+ * @last modified by  : dzshanno@yahoo.com
+**/
 import { LightningElement, api, track } from "lwc";
 import createTrailblazer from "@salesforce/apex/TrailheadLeaderboardAuraController.createTrailblazer";
 
@@ -23,6 +30,11 @@ export default class LeaderboardNewTrailblazerModal extends LightningElement {
     this.userId = event.target.value;
   }
 
+  handleEnter(event) {
+    if (event.keyCode === 13) {
+      this.saveTrailblazer(event);
+    }
+  }
   saveTrailblazer(event) {
     let submitBtn = event.target;
     submitBtn.disabled = true;

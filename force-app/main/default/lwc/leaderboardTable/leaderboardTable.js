@@ -1,3 +1,10 @@
+/**
+ * @description       : 
+ * @author            : dzshanno@yahoo.com
+ * @group             : 
+ * @last modified on  : 18-11-2022
+ * @last modified by  : dzshanno@yahoo.com
+**/
 import { LightningElement, api } from "lwc";
 import LEADERBOARD_SOURCE from "@salesforce/resourceUrl/Trailhead_Leaderboard";
 
@@ -16,7 +23,7 @@ export default class LeaderboardTable extends LightningElement {
   get trailblazerCountString() {
     return this.trailblazerCount
       ? `${this.trailblazerCount} Trailblazers`
-      : "All Trailblazers";
+      : "All Eagleforce Trailblazers";
   }
 
   get desktopCountText() {
@@ -34,6 +41,7 @@ export default class LeaderboardTable extends LightningElement {
   get endCount() {
     const endCount = this.pageSize + this.offset;
     return endCount <= this.trailblazerCount ? endCount : this.trailblazerCount;
+
   }
 
   get offset() {

@@ -1,17 +1,15 @@
+<!--
+  @description       : 
+  @author            : dzshanno@yahoo.com
+  @group             : 
+  @last modified on  : 18-11-2022
+  @last modified by  : dzshanno@yahoo.com
+-->
 <template>
   <div class="slds-p-around_small">
     <c-leaderboard-header></c-leaderboard-header>
-    <c-leaderboard-table
-      if:true={showTable}
-      trailblazers={trailblazers.data}
-      trailblazer-count={totalTrailblazerCount.data}
-      pagination-data={paginationData}
-      onrefreshtable={refresh}
-      onsort={handleSort}
-      onprevious={handlePrevious}
-      onpagesize={handlePageSize}
-      onnext={handleNext}
-      onshowmore={handleShowMore}
-    ></c-leaderboard-table>
+    <c-leaderboard-table trailblazers={trailblazers.data} trailblazer-count={totalTrailblazerCount.data}
+      pagination-data={paginationData} onrefreshtable={refresh} onsort={handleSort} onprevious={handlePrevious}
+      onpagesize={handlePageSize} onnext={handleNext} onshowmore={handleShowMore}></c-leaderboard-table>
   </div>
 </template>

@@ -1,3 +1,10 @@
+<!--
+  @description       : 
+  @author            : dzshanno@yahoo.com
+  @group             : 
+  @last modified on  : 18-11-2022
+  @last modified by  : dzshanno@yahoo.com
+-->
 <template>
   <!-- Desktop View -->
   <div class="slds-show_medium container">
@@ -12,28 +19,16 @@
       <div slot="actions">
         <div class="slds-button-group-row" role="rowgroup">
           <div class="slds-show_inline slds-m-right_medium">
-            <c-leaderboard-pagination
-              pagination-data={paginationData}
-              onprevious={handlePrevious}
-              onpagesize={handlePageSize}
-              onnext={handleNext}
-            ></c-leaderboard-pagination>
+            <c-leaderboard-pagination pagination-data={paginationData} onprevious={handlePrevious}
+              onpagesize={handlePageSize} onnext={handleNext}></c-leaderboard-pagination>
           </div>
-
-          <lightning-button
-            label="Add New"
-            icon-name="utility:adduser"
-            variant="neutral"
-            class="brand-link_button"
-            onclick={showNewTrailblazerModal}
-          ></lightning-button>
+          <lightning-button label="Add New" icon-name="utility:adduser" variant="neutral" class="brand-link_button"
+            onclick={showNewTrailblazerModal}></lightning-button>
         </div>
       </div>
 
       <div class="slds-scrollable_x">
-        <table
-          class="slds-table slds-table_bordered slds-table_cell-buffer leaderboard-table"
-        >
+        <table class="slds-table slds-table_bordered slds-table_cell-buffer leaderboard-table">
           <thead>
             <tr class="slds-text-title_caps">
               <th scope="col" class="slds-cell-wrap">
@@ -41,114 +36,60 @@
               </th>
 
               <th scope="col" class="slds-cell-wrap">
-                <div
-                  class="slds-truncate click-hover"
-                  title="Name"
-                  data-field="Name"
-                  onclick={handleSort}
-                >
+                <div class="slds-truncate click-hover" title="Name" data-field="Name" onclick={handleSort}>
                   Name
-                  <c-leaderboard-sort-dir
-                    column-field="Name"
-                    sort-by={sortBy}
-                    descending={descending}
-                  ></c-leaderboard-sort-dir>
+                  <c-leaderboard-sort-dir column-field="Name" sort-by={sortBy} descending={descending}>
+                  </c-leaderboard-sort-dir>
                 </div>
               </th>
 
               <th scope="col" class="slds-cell-wrap">
-                <div
-                  class="slds-truncate click-hover"
-                  title="Rank"
-                  data-field="Rank__c"
-                  onclick={handleSort}
-                >
+                <div class="slds-truncate click-hover" title="Rank" data-field="Rank__c" onclick={handleSort}>
                   Rank
-                  <c-leaderboard-sort-dir
-                    column-field="Rank__c"
-                    sort-by={sortBy}
-                    descending={descending}
-                  ></c-leaderboard-sort-dir>
+                  <c-leaderboard-sort-dir column-field="Rank__c" sort-by={sortBy} descending={descending}>
+                  </c-leaderboard-sort-dir>
                 </div>
               </th>
 
               <th scope="col" class="slds-cell-wrap">
-                <div
-                  class="slds-truncate click-hover"
-                  title="Points"
-                  data-field="Points__c"
-                  onclick={handleSort}
-                >
+                <div class="slds-truncate click-hover" title="Points" data-field="Points__c" onclick={handleSort}>
                   Points
-                  <c-leaderboard-sort-dir
-                    column-field="Points__c"
-                    sort-by={sortBy}
-                    descending={descending}
-                  ></c-leaderboard-sort-dir>
+                  <c-leaderboard-sort-dir column-field="Points__c" sort-by={sortBy} descending={descending}>
+                  </c-leaderboard-sort-dir>
                 </div>
               </th>
 
               <th scope="col" class="slds-cell-wrap">
-                <div
-                  class="slds-truncate click-hover"
-                  title="Badges"
-                  data-field="Badges__c"
-                  onclick={handleSort}
-                >
+                <div class="slds-truncate click-hover" title="Badges" data-field="Badges__c" onclick={handleSort}>
                   Badges
-                  <c-leaderboard-sort-dir
-                    column-field="Badges__c"
-                    sort-by={sortBy}
-                    descending={descending}
-                  ></c-leaderboard-sort-dir>
+                  <c-leaderboard-sort-dir column-field="Badges__c" sort-by={sortBy} descending={descending}>
+                  </c-leaderboard-sort-dir>
                 </div>
               </th>
 
               <th scope="col" class="slds-cell-wrap">
-                <div
-                  class="slds-truncate click-hover"
-                  title="Trails"
-                  data-field="Trails__c"
-                  onclick={handleSort}
-                >
+                <div class="slds-truncate click-hover" title="Trails" data-field="Trails__c" onclick={handleSort}>
                   Trails
-                  <c-leaderboard-sort-dir
-                    column-field="Trails__c"
-                    sort-by={sortBy}
-                    descending={descending}
-                  ></c-leaderboard-sort-dir>
+                  <c-leaderboard-sort-dir column-field="Trails__c" sort-by={sortBy} descending={descending}>
+                  </c-leaderboard-sort-dir>
                 </div>
               </th>
 
               <th scope="col" class="slds-cell-wrap">
-                <div
-                  class="slds-truncate click-hover"
-                  title="Superbadges"
-                  data-field="Superbadges__c"
-                  onclick={handleSort}
-                >
+                <div class="slds-truncate click-hover" title="Superbadges" data-field="Superbadges__c"
+                  onclick={handleSort}>
                   Superbadges
-                  <c-leaderboard-sort-dir
-                    column-field="Superbadges__c"
-                    sort-by={sortBy}
-                    descending={descending}
-                  ></c-leaderboard-sort-dir>
+                  <c-leaderboard-sort-dir column-field="Superbadges__c" sort-by={sortBy} descending={descending}>
+                  </c-leaderboard-sort-dir>
                 </div>
               </th>
 
               <th scope="col" class="slds-cell-wrap">
-                <div
-                  class="slds-truncate click-hover"
-                  title="Certifications"
-                  data-field="Certifications__c"
-                  onclick={handleSort}
-                >
+                <div class="slds-truncate click-hover" title="Certifications" data-field="Certifications__c"
+                  onclick={handleSort}>
                   Certifications
-                  <c-leaderboard-sort-dir
-                    column-field="Certifications__c"
-                    sort-by={sortBy}
-                    descending={descending}
-                  ></c-leaderboard-sort-dir>
+                  <c-leaderboard-sort-dir column-field="Certifications__c" sort-by={sortBy} descending={descending}>
+                  </c-leaderboard-sort-dir>
                 </div>
               </th>
 
@@ -159,39 +100,15 @@
           </thead>
 
           <tbody>
-            <template
-              for:each={trailblazers}
-              for:item="trailblazer"
-              for:index="index"
-            >
-              <c-leaderboard-profile-table-row
-                key={trailblazer.Id}
-                trailblazer={trailblazer}
-                index={index}
-                offset={paginationData.offset}
-                onopenmodal={showProfileModal}
-              ></c-leaderboard-profile-table-row>
+            <template for:each={trailblazers} for:item="trailblazer" for:index="index">
+              <c-leaderboard-profile-table-row key={trailblazer.Id} trailblazer={trailblazer} index={index}
+                offset={paginationData.offset} onopenmodal={showProfileModal}></c-leaderboard-profile-table-row>
             </template>
           </tbody>
         </table>
       </div>
 
-      <div slot="footer">
-        <div
-          class="slds-text-title_caps slds-align_absolute-center"
-          style="margin-top: -0.75rem"
-        >
-          <img src={githubLogoUrl} width="24" alt="github" class="logo" />
-          &nbsp;/&nbsp;
-          <a
-            href="https://github.com/meruff"
-            target="_blank"
-            class="brand-link"
-          >
-            meruff
-          </a>
-        </div>
-      </div>
+
     </lightning-card>
   </div>
 
@@ -207,70 +124,34 @@
         </h2>
 
         <div slot="actions">
-          <lightning-button-icon
-            icon-name="utility:adduser"
-            variant="container"
-            class="brand-link_button-icon"
-            onclick={showNewTrailblazerModal}
-          ></lightning-button-icon>
+          <lightning-button-icon icon-name="utility:adduser" variant="container" class="brand-link_button-icon"
+            onclick={showNewTrailblazerModal}></lightning-button-icon>
         </div>
       </lightning-card>
     </div>
 
     <lightning-layout multiple-rows="true">
-      <template
-        for:each={trailblazers}
-        for:item="trailblazer"
-        for:index="index"
-      >
+      <template for:each={trailblazers} for:item="trailblazer" for:index="index">
         <lightning-layout-item key={trailblazer.Id} size="12">
-          <c-leaderboard-profile-card
-            trailblazer={trailblazer}
-            index={index}
-            onopenmodal={showProfileModal}
-          ></c-leaderboard-profile-card>
+          <c-leaderboard-profile-card trailblazer={trailblazer} index={index} onopenmodal={showProfileModal}>
+          </c-leaderboard-profile-card>
         </lightning-layout-item>
       </template>
     </lightning-layout>
 
-    <div
-      if:true={showMoreButton}
-      class="slds-text-title_caps slds-align_absolute-center"
-      style="margin-top: -0.5rem; margin-bottom: 1.5rem"
-    >
-      <lightning-button
-        icon-name="utility:jump_to_bottom"
-        variant="neutral"
-        label="Show More"
-        onclick={handleShowMore}
-      ></lightning-button>
+    <div if:true={showMoreButton} class="slds-text-title_caps slds-align_absolute-center"
+      style="margin-top: -0.5rem; margin-bottom: 1.5rem">
+      <lightning-button icon-name="utility:jump_to_bottom" variant="neutral" label="Show More" onclick={handleShowMore}>
+      </lightning-button>
     </div>
 
-    <lightning-card>
-      <div
-        class="slds-text-title_caps slds-align_absolute-center"
-        style="margin-top: -0.75rem"
-      >
-        <img src={githubLogoUrl} width="24" alt="github" class="logo" />
-        &nbsp;/&nbsp;
-        <a href="https://github.com/meruff" target="_blank" class="brand-link">
-          meruff
-        </a>
-      </div>
-    </lightning-card>
+
   </div>
 
-  <c-leaderboard-new-trailblazer-modal
-    is-modal-open={isTrailblazerModalOpen}
-    onclosemodal={hideNewTrailblazerModal}
-    onrefreshtable={fireRefresh}
-  ></c-leaderboard-new-trailblazer-modal>
+  <c-leaderboard-new-trailblazer-modal is-modal-open={isTrailblazerModalOpen} onclosemodal={hideNewTrailblazerModal}
+    onrefreshtable={fireRefresh}></c-leaderboard-new-trailblazer-modal>
 
-  <c-leaderboard-profile-modal
-    is-modal-open={isProfileModalOpen}
-    trailblazers={trailblazers}
-    selected-trailblazer-id={selectedTrailblazerId}
-    selected-trailblazer-handle={selectedTrailblazerHandle}
-    onclosemodal={hideProfileModal}
-  ></c-leaderboard-profile-modal>
+  <c-leaderboard-profile-modal is-modal-open={isProfileModalOpen} trailblazers={trailblazers}
+    selected-trailblazer-id={selectedTrailblazerId} selected-trailblazer-handle={selectedTrailblazerHandle}
+    onclosemodal={hideProfileModal}></c-leaderboard-profile-modal>
 </template>

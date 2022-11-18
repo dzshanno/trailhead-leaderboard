@@ -4,4 +4,9 @@
     <description>Used to display Trailblazers on a leaderboard.</description>
     <isExposed>true</isExposed>
     <masterLabel>Trailhead Leaderboard</masterLabel>
+    <targets>
+        <target>lightning__AppPage</target>
+        <target>lightning__RecordPage</target>
+        <target>lightning__HomePage</target>
+    </targets>
 </LightningComponentBundle>

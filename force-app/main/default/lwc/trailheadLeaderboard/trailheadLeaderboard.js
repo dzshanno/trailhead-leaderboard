@@ -1,3 +1,10 @@
+/**
+ * @description       : 
+ * @author            : dzshanno@yahoo.com
+ * @group             : 
+ * @last modified on  : 18-11-2022
+ * @last modified by  : dzshanno@yahoo.com
+**/
 import { LightningElement, wire } from "lwc";
 import { refreshApex } from "@salesforce/apex";
 import populateTrailblazers from "@salesforce/apex/TrailheadLeaderboardAuraController.populateTrailblazers";
